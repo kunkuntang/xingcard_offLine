@@ -1,0 +1,337 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select {
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft YaHei",sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+ *{
+	color:#FFFFFF;
+	font-family: "Microsoft YaHei",sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 62.5%;
+	min-height: 450px;
+}
+
+li{
+	list-style: none;
+}
+
+.container{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.bg,.mask{
+	width: 100%;
+	height: 100%;
+	min-height: 450px;
+	position: absolute;
+}
+.bg{
+	background: url(image/loginBg.png) center no-repeat;
+	background-size: cover;
+}
+.mask{
+	background-color: black;
+	
+	opacity: 0.8;
+}
+
+section {
+	width: 100%;
+	height: 100%;
+	/*background-color: #1E90FF;*/
+	position: relative;
+}
+section .image {
+	padding-top: 2rem;
+	text-align: center;
+}
+.image img {
+	width: 120px;
+	height: 120px;
+}
+section .titleCon {
+	position: relative;
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+	top: 1rem;
+	opacity: 0;
+}
+section .titleCon .line{
+	width: 5.5rem;
+	height: 1px;
+	background-color: white;
+	opacity: 0.7;
+}
+.leftLine{
+	position: absolute;
+	top: 1.5rem;
+}
+.rightLine{
+	position: absolute;
+	top: 1.5rem;
+	right: 0rem;
+}
+.formCon {
+	position: relative;
+	width: 70%;
+	top: -1rem;
+	left: 15%;
+
+}
+.formCon .title{
+	color: #FFFFFF;
+	font-size: 1.8rem;
+}
+.formCon .textLine{
+	width: 100%;
+	border-bottom: 1px solid #FFFFFF;
+}
+section span {
+	line-height: 3rem;
+	display: inline-block;
+	height: 3rem;
+	font-size: 2.2rem;
+	color: #fff;
+	text-align: center;
+}
+
+input,#submit{
+	position: relative;
+	width: 100%;
+	border: none;
+	color: #FFFFFF;
+}
+
+input[id=login]{
+	margin-top: 1rem;
+	height: 40px;
+	font-size: 1.5rem;
+	background-color: transparent;
+	/*border-bottom: 1px solid #FFFFFF;*/
+}
+#submit{
+	/*margin: 6rem 0 0 5rem;*/
+	margin: 3rem auto;
+	display: block;
+	width: 50%;
+}
+input:focus{
+	outline: none;
+	
+}
+
+@media only screen and (min-width: 320px) and (max-width: 370px) {/*iphone5 5c 5s se*/
+	html,body{
+		font-size: 50%;
+	}
+	section .image {
+		padding-top: 3rem;
+		text-align: center;
+	}
+
+	.image img {
+		height: 100px;
+		width: 100px;
+	}
+}
+
+@media (device-height:480px) and (-webkit-min-device-pixel-ratio:2){/* 兼容iphone4/4s */
+	section .image {
+		padding-top: 4rem;
+		text-align: center;
+	}
+
+	section .formCon{
+		bottom: 0;
+	}
+
+}
+
+/* ------- 登陆页CSS结束 ------- */
+
+#contactGroupMask{
+	display: none;
+	position: absolute;
+	background-color: #080f1c;
+	width: 100%;
+	height: 100%;
+	opacity: 0.4 ;
+}
+
+.sideBar{
+	position: absolute;
+	left: -100%;
+	/*left: 0;*/
+	height: 100%;
+	width: 70%;
+	transition: left cubic-bezier(0.22, 0.61, 0.36, 1) .5s;
+	background-color: #080f1c;
+}
+
+
+.sideBar .icon{
+	text-align: center;
+}
+
+
+.sideBar img{
+	height: 10rem;
+	padding: 2.5rem 3rem 2rem 3rem;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.sideBar .departments{
+	width: 100%;
+	height: 50%;
+	padding-top: 2rem;
+	overflow: hidden;
+}
+
+.sideBar #contactGroupView{
+	width: 100%;
+	transition: transform ease-out .3s;
+	-webkit-transition: transform ease-out .3s;
+}
+
+.sideBar .departments li{
+	height: 6rem;
+	width: 80%;
+	color: #FFFFFF;
+	font-size: 2rem;
+	text-align: left;
+	padding-left: 20%;
+	line-height: 6rem;
+}
+
+.sideBar .logout{
+	width: 45%;
+	margin: 0 0 0 4rem;
+	height: 3rem;
+	background-color: #CA2828;
+	color: #FFFFFF;
+	font-family: "microsoft yahei";
+	text-align: center;
+	line-height: 3rem;
+	font-size: 2rem;
+	border-radius: 3px;
+	margin-top: 5rem;
+}
+
+
+
+/* -----  联系人界面  -------*/
+
+.header{
+	width: 100%;
+	height: 5rem;
+	padding-top: 1rem;
+}
+
+.header #groupBtn{
+	width: 4rem;
+	height: 3rem;
+	margin-left: 2rem;
+	vertical-align: text-bottom;
+}
+
+.header #title{
+	font-family: "microsoft yahei", "microsoft sans serif";
+	font-size: 3rem;
+	vertical-align: text-bottom;
+	color: #FFFFFF;
+}
+.contactHeader{
+	display: flex;
+	display: -webkit-flex;
+	height: 6rem;
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 25px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.contactHeader .contactNameIcon{
+	flex: 1;
+	-webkit-flex: 1;
+	background-color: blueviolet;
+	height: 100%;
+	background: url(image/peopleIcon.png) center no-repeat;
+	background-size: contain;
+}
+
+.contactHeader .contactNumIcon{
+	flex: 1;
+	-webkit-flex: 1;
+	background-color: cornflowerblue;
+	height: 100%;
+	background: url(image/phoneIcon.png) center no-repeat;
+	background-size: contain;
+}
+
+.contactHeader .contactMesIcon{
+	flex: 1;
+	-webkit-flex: 1;
+	background-color: coral;
+	height: 100%;
+	background: url(image/messageIcon.png) center no-repeat;
+	background-size: contain;
+}
+
+#contactBodyView{
+	width: 100%;
+	transition: transform ease-out .3s;
+	-webkit-transition: transform ease-out .3s;
+}
+
+.contactBody{
+	height: 60%;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 90%;
+	text-align: center;
+	font-size: 20px;
+	color: #FFFFFF;
+}
+
+.contactRow{
+	width: 100%;
+	display: flex;
+	display: -webkit-flex;
+}
+
+.contactBody .contactName{
+	flex: 1;
+	-webkit-flex: 2;
+	height: 4rem;
+	line-height: 4rem;
+}
+
+.contactBody .contactNum{
+	color: #FF7F50;
+	text-decoration: none;
+	font-style: normal;
+	flex: 3;
+	-webkit-flex: 3;
+	height: 4rem;
+	line-height: 4rem;
+	display: block;
+}
+
+.contactBody .contactMes{
+	flex: 1;
+	-webkit-flex: 2;
+	height: 4rem;
+	padding-top: 10px;
+}
+
+.contactBody .contactMes img{
+	height: 3rem;
+}

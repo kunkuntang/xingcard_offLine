@@ -1,0 +1,3 @@
+xcard.animation = (function(){
+	
+})();
